@@ -117,7 +117,7 @@ public class GeneralEventHandler implements Listener {
         try {
             if (!plugin.getVanishStateMgr().isVanished(e.getPlayer().getUniqueId())) return;
             if (e.getAction() != Action.PHYSICAL) return;
-            if (e.getClickedBlock() != null && e.getClickedBlock().getType() == Material.SOIL)
+            if (e.getClickedBlock() != null && e.getClickedBlock().getType() == Material.FARMLAND)
                 e.setCancelled(true);
         } catch (Exception er) {
             plugin.logException(er);

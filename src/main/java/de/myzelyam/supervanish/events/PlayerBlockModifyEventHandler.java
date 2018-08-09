@@ -40,10 +40,15 @@ public class PlayerBlockModifyEventHandler implements Listener {
                 if (!plugin.getSettings().getBoolean("InvisibilityFeatures.DisablePressurePlates"))
                     return;
                 Material blockType = e.getClickedBlock().getType();
-                if (blockType == Material.STONE_PLATE
-                        || blockType == Material.GOLD_PLATE
-                        || blockType == Material.IRON_PLATE
-                        || blockType == Material.WOOD_PLATE
+                if (blockType == Material.STONE_PRESSURE_PLATE
+                        || blockType == Material.HEAVY_WEIGHTED_PRESSURE_PLATE
+                        || blockType == Material.LIGHT_WEIGHTED_PRESSURE_PLATE
+                        || blockType == Material.OAK_PRESSURE_PLATE
+                        || blockType == Material.ACACIA_PRESSURE_PLATE
+                        || blockType == Material.BIRCH_PRESSURE_PLATE
+                        || blockType == Material.DARK_OAK_PRESSURE_PLATE
+                        || blockType == Material.JUNGLE_PRESSURE_PLATE
+                        || blockType == Material.SPRUCE_PRESSURE_PLATE
                         || blockType == Material.TRIPWIRE) {
                     e.setCancelled(true);
                 }
